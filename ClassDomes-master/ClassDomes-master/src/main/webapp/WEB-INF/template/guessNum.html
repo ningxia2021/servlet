@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>猜数字——使用模板引擎</title>
+    </head>
+    <body>
+        <form action="guess" method="POST">
+            <input type="text" name="num">
+            <input type="submit" value="提交结果">
+        </form>
+        <!-- 新游戏 不显示结果 开启游戏后 显示结果-->
+        <div th:if="${!newGame}">
+            <div th:text = "${ret}"></div>
+            <div th:text = "${count}"></div>
+        </div>
+    </body>
+</html>

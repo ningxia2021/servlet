@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>电话本</title>
+</head>
+<body>
+<ul>
+    <!-- 这里就相当于 for(Person person : persons) Person这个类有两个属性  name 和 phone-->
+    <li th:each="person : ${persons}">
+        <span th:text="${person.name}"></span>
+        <span th:text="${person.phone}"></span>
+    </li>
+</ul>
+</body>
+</html>

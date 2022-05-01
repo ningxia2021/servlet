@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Servlet Methods</title>
+</head>
+<body>
+<button onclick="sendGet()">发送 GET 请求</button>
+<button onclick="sendPost()">发送 POST 请求</button>
+<button onclick="sendPut()">发送 PUT 请求</button>
+
+
+<!-- src这是在引入Jquery 为的是可以使用ajaxi -->
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+
+    function sendGet() {
+        $.ajax({
+            type: "get",
+            // 相对路径 是以index.html为基准的 也就是以点击事件发生的所在页面为基准
+            // url: "method",
+            url:"/java_Web_exploded/method",
+            success: function (data, status) {
+                console.log(data);
+            }
+        })
+
+    }
+
+    function sendPost() {
+        $.ajax({
+            type: "post",
+            url: "method",
+            data: "request body",
+            success: function (data, status) {
+                console.log(data);
+            }
+        })
+    }
+
+    function sendPut() {
+        $.ajax({
+            type: "put",
+            url: "method",
+            success: function (data, status) {
+                console.log(data);
+            }
+        })
+    }
+</script>
+</body>
+</html>
