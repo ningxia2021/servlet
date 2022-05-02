@@ -4,117 +4,21 @@
     <meta charset="UTF-8">
     <title>登录</title>
     <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-<style>
-    body {
-        background: url("image/mountain.jpg") no-repeat center;
-        background-size: cover;
-        background-attachment: fixed;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    <!--  去除浏览器默认设置  -->
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    .container {
-        margin: auto;
-        width: 300px;
-        height: 250px;
-        margin-top: 230px;
-        margin-right: 200px;
-        color: aliceblue;
-        /*background-color: orange;*/
-        background-color: #00000060;
-        /*background-color: white;*/
-        border-radius: 10px;
-
-    }
-
-    .container h3 {
-        font-size: 20px;
-        text-align: center;
-        color: #ffffff;
-        height: 15px;
-    }
-
-    .row {
-        width: 300px;
-        height: 50px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .row label {
-        width: 80px;
-        font-size: 25px;
-    }
-
-    .row input {
-        /*background-color: #00000060;*/
-        width: 200px;
-        height: 35px;
-        /*设置行间距*/
-        line-height: 40px;
-        /*首行缩进*/
-        text-indent: 0.5em;
-        /*去除轮廓线*/
-        outline: none;
-        font-size: 15px;
-        /*color: wheat;*/
-    }
-
-    #submit {
-        /*操作两个div并排一行*/
-        float: left;
-        width: 100px;
-        height: 30px;
-        /*background-color: red;*/
-        margin-left: 20px;
-        margin-top: 20px;
-        border-radius: 5px;
-        border: none;
-    }
-
-    #submit:active {
-        background-color: orange;
-    }
-
-    #reg {
-        float: right;
-        width: 100px;
-        height: 30px;
-        /*background-color: hotpink;*/
-        margin-right: 20px;
-        margin-top: 20px;
-        border-radius: 5px;
-        border: none;
-    }
-
-    #reg:active {
-        background-color: orange;
-    }
-</style>
 <div class="container">
     <h3>登录</h3>
-    <form>
+    <form action="login" method="post">
         <div class="row">
             <i class="fa fa-user-circle-o" aria-hidden="true" style="padding-right: 10px"></i>
 <!--            <label>Id</label>-->
-            <input type="text" placeholder="Username">
+            <input type="text" placeholder="Username" name="username">
         </div>
         <div class="row">
             <i class="fa fa-key" aria-hidden="true" style="padding-right: 10px"></i>
 <!--            <label>Key</label>-->
-            <input type="text" placeholder="PassWord">
+            <input type="text" placeholder="PassWord" name="password">
         </div>
         <div class="button">
             <button id="submit">提交</button>
